@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./blog.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+</head>
+
+<body>
+    <nav>
+        <img src="./banner.png" alt="Suqui Writes">
+    </nav>
+    {% for entry in entries %}
+        <div class="row">
+            <span class="entry">
+                <div class="quote">
+                    <a href="./entry1.html">
+                        <h2>Some quote</h2>
+                    </a>
+                </div>
+                <div class="presentation">
+                    <a href="./entry1.html">
+                        <h3>{{ entry.title }}</h3>
+                        <p>{{ entry.published_date}}</p>
+                    </a>
+                </div>
+            </span>
+        </div>
+    {% endfor %}
+</body>

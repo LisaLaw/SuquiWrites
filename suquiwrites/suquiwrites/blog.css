@@ -1,0 +1,127 @@
+html {
+    width: 100%;
+    font-family: 'ABeeZee', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f8f3f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 95%;
+    align-self: center;
+    border-radius: 2px;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 95%;
+    background-color: white;
+    align-items: center;
+    margin-top: 25px;
+    z-index: 5;
+    box-shadow: 1px 1px 3px #8f666c;
+    border-bottom: 1px solid #8f666c;
+    border-radius: 5px;
+}
+
+nav img {
+    height: 105px;
+    align-self: center;
+    overflow: hidden;
+    padding: 2px;
+    padding-right: 30px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding-top: 140px;
+    width: 100%;
+}
+
+.entry {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.entry:hover {
+    cursor: pointer;
+    animation: 0.7s wobble ease-in-out;
+}
+
+@keyframes wobble { 
+    0% { transform: rotate(0deg) } 
+    15% { transform: rotate(-0.5deg); } 
+    30% { transform: rotate(0deg); } 
+    45% { transform: rotate(0.5deg); } 
+    60% { transform: rotate(0deg); } 
+    75% { transform: rotate(-0.5deg); } 
+    100% { transform: rotate(0deg); } 
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.quote {
+    background-color: #e4bfdb;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #8f666c;
+    border-bottom: 1px solid #8f666c;
+    border-radius: 5px;
+}
+
+.quote h2 {
+    text-align: center;
+    font-style: italic;
+    color: black;
+    height: 250px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 20px;
+}
+
+.presentation {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin-top: -60px;
+    box-shadow: 1px 1px 3px #8f666c;
+    border-bottom: 1px solid #8d7d80;
+    border-right-style: 1px solid #8d7d80;
+    border-radius: 5px;
+}
+
+.presentation a, .quote a {
+    text-decoration: none;
+    color: black;
+}
+
+h3 {
+    text-align: center;
+    color: rgb(172, 82, 109);
+    font-size: 20px;
+}
+
+p {
+    text-align: center;
+}
