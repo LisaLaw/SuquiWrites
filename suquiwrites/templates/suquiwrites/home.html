@@ -1,18 +1,21 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./blog.css">
+    <link rel="stylesheet" href="../../static/css/blog.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
 </head>
 
 <body>
-    <nav>
-        <img src="./banner.png" alt="Suqui Writes">
+    <div class="background"></div>
+    <nav>    
+        <img src="../../static/images/banner.png" alt="Suqui Writes">
     </nav>
-    {% for entry in entries %}
         <div class="row">
+            {% load static %}
+            {% for entry in entries %}
             <span class="entry">
                 <div class="quote">
                     <a href="./entry1.html">
@@ -26,6 +29,7 @@
                     </a>
                 </div>
             </span>
+            {% endfor %}
         </div>
-    {% endfor %}
+    
 </body>
