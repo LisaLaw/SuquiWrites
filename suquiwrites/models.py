@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+import datetime
 from django.utils import timezone
 
 
@@ -11,7 +12,7 @@ class Entry(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
-        self.published_date = timezone.now()
+        self.published_date = datetime.date.today()
         self.save()
 
     def __str__(self):
