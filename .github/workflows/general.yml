@@ -1,0 +1,12 @@
+name: key
+
+on: [push, pull_request, deployment]
+
+env:
+    runs-on: ubuntu-latest
+      - uses: actions/labeler@v2
+        with:
+          repo-token: ${{ secrets.SUQUI_WRITES_SECRET_KEY }}
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.ghcr_token }}
