@@ -1,0 +1,13 @@
+{% extends 'suquiwrites/base.html' %}
+
+{% block content %}
+    <div class="entry">
+        {% if entry.published_date %}
+            <div class="date">
+                {{ entry.published_date|date:"d M Y" }}
+            </div>
+        {% endif %}
+        <h3>{{ entry.title }}</h3>
+        <p>{{ entry.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
