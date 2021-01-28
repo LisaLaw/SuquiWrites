@@ -135,3 +135,17 @@ h3 {
 p {
     text-align: center;
 }
+
+/*start css for entry_detail page*/
+
+h1 {
+    text-align: center;
+    color: rgb(226, 67, 115);
+    font-size: 40px;
+    background-color: white;
+    width: 95%;
+    box-shadow: 1px 1px 5px #8f666c;
+    border-bottom: 1px solid #8f666c;
+    border-radius: 5px;
+    margin-top: 25px;
+}
