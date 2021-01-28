@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
+{% load static %}
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../static/css/blog.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
 </head>
 
@@ -14,7 +14,6 @@
         <img src="../../static/images/banner.png" alt="Suqui Writes">
     </nav>
         <div class="row">
-            {% load static %}
             {% for entry in entries %}
             <span class="entry">
                 <div class="quote">
