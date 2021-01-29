@@ -1,16 +1,21 @@
 {% extends 'suquiwrites/base.html' %}
 
+{% block intro %}
+    <button class="btn-back"><a href="{% url 'home' %}">Back to Suqui Writes</a></button>
+{% endblock %}
+
 {% block content %}
     <div class="entry_with_detail">
         <h1>{{ entry.title }}</h1>
-        {% if entry.published_date %}
-            <div class="date">
-                {{ entry.published_date|date:"d M Y" }}
-            </div>
-            {% if user.is_authenticated %}
-                <a href="{% url 'entry_edit' pk=post.pk %}"></a>
-            {% endif %}
-        {% endif %}
         <p>{{ entry.text|linebreaksbr }}</p>
+        <p class="detail_date">
+            {% if entry.published_date %}
+                written by {{ entry.author }}, </br>
+                {{ entry.published_date|date:"d M Y" }}
+                {% if user.is_authenticated %}
+                    <a href="{% url 'entry_edit' pk=entry.pk %}"></a>
+                {% endif %}
+            {% endif %}
+        </p>
     </div>
 {% endblock %}

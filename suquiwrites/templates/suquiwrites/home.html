@@ -1,19 +1,34 @@
 {% extends 'suquiwrites/base.html' %}
 
-{% block content %}    
-    {% for entry in entries %}
-        <span class="entry">
-            <div class="quote">
-                <a href="{% url 'entry_detail' pk=entry.pk %}">
-                    <h2>Some quote</h2>
-                </a>
-            </div>
-            <div class="presentation">
-                <a href="{% url 'entry_detail' pk=entry.pk %}">
-                    <h3>{{ entry.title }}</h3>
-                    <p>{{ entry.published_date|date:"d M Y"}}</p>
-                </a>
-            </div>
-        </span>
-    {% endfor %}
+{% block intro %}
+    <div class="entry_with_detail">
+        <h2>About me</h2>
+        <p class="intro_p">My name is Suqui, I'm so glad you found my blog. Welcome!<br>
+            <br>
+            I'm a programmer, linguist, kareteka and foodie.<br>
+            I love reading high fantasy novels, watching Disney, and everything hot.<br>
+            I am a wannabe vegan most of the time, a teddy on the inside and
+            Below you will find random articles about life as an expat, mental health, life lessons and anything else I can think of. <br>
+            Feel free to <a href="#contact_box" class="intro_a">get in touch</a>!
+    </div>
+{% endblock %}
+
+{% block content %}   
+    <div class=row>
+        {% for entry in entries %}
+            <span class="entry">
+                <div class="quote">
+                    <a href="{% url 'entry_detail' pk=entry.pk %}">
+                        <h2>Some quote</h2>
+                    </a>
+                </div>
+                <div class="presentation">
+                    <a href="{% url 'entry_detail' pk=entry.pk %}">
+                        <h3>{{ entry.title }}</h3>
+                        <p class="presentation_p">{{ entry.published_date|date:"d M Y"}}</p>
+                    </a>
+                </div>
+            </span>
+        {% endfor %}
+    </div>
 {% endblock %}
