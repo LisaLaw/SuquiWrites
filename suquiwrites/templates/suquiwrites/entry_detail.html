@@ -1,7 +1,4 @@
 {% extends 'suquiwrites/base.html' %}
-{% block extra_head %}
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}"/>
-{% endblock %}
 
 {% block content %}
     <div class="entry_with_detail">
@@ -10,6 +7,9 @@
             <div class="date">
                 {{ entry.published_date|date:"d M Y" }}
             </div>
+            {% if user.is_authenticated %}
+                <a href="{% url 'entry_edit' pk=post.pk %}"></a>
+            {% endif %}
         {% endif %}
         <p>{{ entry.text|linebreaksbr }}</p>
     </div>

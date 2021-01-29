@@ -6,11 +6,14 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
-        {% block extra_head %}{% endblock %}
     </head>
 
     <body>
-        <div class="background"></div>
+        <div class="background">
+            {% if user.is_authenticated %}
+                <a href="{% url 'entry_new' %}" class="top-menu"></a>
+            {% endif %}
+        </div>
         <nav>    
             <img src="{% static 'images/banner.png' %}" alt="Suqui Writes">
         </nav>
