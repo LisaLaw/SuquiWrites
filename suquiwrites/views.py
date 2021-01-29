@@ -34,7 +34,7 @@ def entry_new(request):
 def entry_edit(request, pk):
     entry = get_object_or_404(Entry, pk=pk)
     if request.method == "POST":
-        form = EntryForm(request.POST, instance=post)
+        form = EntryForm(request.POST, instance=entry)
         if form.is_valid():
             entry = form.save(commit=False)
             entry.author = request.user
@@ -42,5 +42,5 @@ def entry_edit(request, pk):
             entry.save()
             return redirect("entry_detail", pk=entry.pk)
     else:
-        form = EntryForm(instance=post)
+        form = EntryForm(instance=entry)
     return render(request, "suquiwrites/entry_edit.html", {"form": form})
