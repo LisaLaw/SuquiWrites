@@ -18,4 +18,23 @@
             {% endif %}
         </p>
     </div>
+    <div class="comment_section">
+        <h2>What do you think?</h2>
+
+        {% for comment in comments %}
+        <div class="comment_box">
+            <p>
+                {{ comment.name }}
+                <span>{{ comment.date_posted }}</span>
+            </p>
+            {{ comment.text|linebreaks }}
+        </div>
+        {% endfor %}
+        <div>
+            <form method="POST">
+                {{ comment_form.as_p }}
+                {% csrf_token %}
+                <button type="submit">Add my thoughts</button>
+            </form>
+    </div>
 {% endblock %}

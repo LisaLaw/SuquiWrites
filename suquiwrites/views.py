@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Entry
-from .forms import EntryForm
+from .models import Entry, Comment
+from .forms import EntryForm, CommentForm
 from django.utils import timezone
 from django.shortcuts import redirect
+from django.views.generic import DetailView
 
 
 def home(request):
@@ -14,7 +15,27 @@ def home(request):
 
 def entry_detail(request, pk):
     entry = get_object_or_404(Entry, pk=pk)
-    return render(request, "suquiwrites/entry_detail.html", {"entry": entry})
+    comments = entry.comments.all()
+    new_comment = None
+    if request.method == "Post":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.connected_entry = entry
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
+
+    return render(
+        request,
+        "suquiwrites/entry_detail.html",
+        {
+            "entry": entry,
+            "comments": comments,
+            "new_comment": new_comment,
+            "comment_form": comment_form,
+        },
+    )
 
 
 def entry_new(request):
