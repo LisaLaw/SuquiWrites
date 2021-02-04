@@ -5,10 +5,16 @@ from .models import Entry, Comment
 class EntryForm(forms.ModelForm):
     class Meta:
         model = Entry
-        fields = ("title", "text")
+        fields = (
+            "title",
+            "text",
+        )
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ("name", "text")
+        fields = (
+            "name",
+            "thoughts",
+        )

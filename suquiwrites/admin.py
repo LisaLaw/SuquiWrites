@@ -13,6 +13,6 @@ class EntryAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ["name", "text", "date_posted", "connected_entry"]
+    list_display = ["name", "thoughts", "date_posted", "connected_entry"]
     readonly_fields = ["connected_entry"]
     list_filter = ["name", "date_posted", "connected_entry"]

@@ -12,29 +12,42 @@
             {% if entry.published_date %}
                 written by {{ entry.author }}, </br>
                 {{ entry.published_date|date:"d M Y" }}
-                {% if user.is_authenticated %}
-                    <a href="{% url 'entry_edit' pk=entry.pk %}"></a>
-                {% endif %}
             {% endif %}
         </p>
     </div>
     <div class="comment_section">
-        <h2>What do you think?</h2>
+        <div class="left">
+            <h2>What do you think?</h2>
 
-        {% for comment in comments %}
-        <div class="comment_box">
-            <p>
-                {{ comment.name }}
-                <span>{{ comment.date_posted }}</span>
-            </p>
-            {{ comment.text|linebreaks }}
-        </div>
-        {% endfor %}
-        <div>
-            <form method="POST">
+            <form method="POST" class="comment_form">
                 {{ comment_form.as_p }}
                 {% csrf_token %}
-                <button type="submit">Add my thoughts</button>
+                <a href="{% url 'entry_detail' pk=entry.pk %}">
+                <div class="form_btn">
+                    <input type="submit" value="Add my thoughts">
+                </div>
+                </a>
             </form>
+        </div>
+
+        <div class="right">
+
+            {% for comment in entry.comments.all %}
+            <div class="comment_box">
+                <p style="text-decoration:underline">
+                    {{ comment.name }} says:
+                </p>
+                <p class="comment_text">
+                    {{ comment.thoughts|linebreaks }}
+                </p>
+                <p class="detail_date comm">
+                    {{ comment.date_posted }}
+                </p>
+            </div>
+            {% empty %}
+                <h2>Be the first to share your thoughts!</h2>
+            {% endfor %}
+        </div>
+            
     </div>
 {% endblock %}

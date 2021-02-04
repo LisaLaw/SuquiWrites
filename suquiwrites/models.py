@@ -7,6 +7,13 @@ class Entry(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     published_date = models.DateTimeField(auto_now_add=True)
+    image = models.ImageField(upload_to="Entries", blank=True, null=True)
+    quote = models.TextField(max_length=200, default="", blank=True)
+
+    class Meta:
+        verbose_name = "Entry"
+        verbose_name_plural = "Entries"
+        ordering = ["-published_date"]
 
     def __str__(self):
         return self.title
@@ -14,11 +21,16 @@ class Entry(models.Model):
 
 class Comment(models.Model):
     name = models.CharField(max_length=50, blank="False", default="guest")
-    text = models.TextField(blank=True)
+    thoughts = models.TextField(blank=True)
     date_posted = models.DateTimeField(auto_now_add=True)
     connected_entry = models.ForeignKey(
         Entry, related_name="comments", on_delete=models.CASCADE
     )
+
+    class Meta:
+        verbose_name = "Comment"
+        verbose_name_plural = "Comments"
+        ordering = ["-date_posted"]
 
     def __str__(self):
         return self.author + "," + self.connected_entry.title[:40]

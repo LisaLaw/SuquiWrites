@@ -62,7 +62,7 @@ nav img {
     padding-top: 10px;
 }
 
-.entry_with_detail {
+.entry_with_detail, .comment_box {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -137,17 +137,23 @@ a:hover {
     box-shadow: 1px 1px 3px #8f666c;
     border-bottom: 2px solid #8f666c;
     border-radius: 5px;
-}
-
-.quote h2 {
-    text-align: center;
-    font-style: italic;
-    color: black;
     height: 300px; 
     display: flex;
     align-items: center;
     justify-content: center;
     border-top: 20px;
+}
+
+.quote_image {
+    height:100%;
+    width: auto;
+}
+
+.quote p {
+    text-align: center;
+    font-style: italic;
+    color: black;
+    
 }
 
 .presentation {
@@ -217,6 +223,7 @@ h3 {
 
 .contact_img_box {
     width: 8%;
+    margin-top: 5px;
 }
 
 .contact a:hover {
@@ -229,24 +236,27 @@ h3 {
 }
 
 .contact .make_big {
-    width: 90%;
+    width: 60%;
 }
 
 /*start css for entry_detail page*/
 
+button {
+    border: 1pt #8f666c solid;
+    box-shadow: -1px 1px 1px #8f666c;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 .btn-back {
-    border: none;
-    background-color: inherit;
+    color: slategrey;
     border-radius: 10px;
     padding: 8px 10px;
     font-size: 15px;
     margin-left: 0px;
     margin-bottom: 1%;
-    box-shadow: -1px 1px 5px #8f666c;
-}
-
-.btn-back:hover {
-    cursor: pointer;
 }
 
 .btn-back a {
@@ -265,4 +275,39 @@ h1 {
     margin: 2%;
     line-height: 1.5;
     text-align: right;
+}
+
+.comment_section {
+    border-top: 1px solid #8f666c;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.right {
+    background-color: transparent;
+    height: inherit;
+}
+
+.comment_box {
+    margin-top: 2%;
+}
+
+.comm {
+    margin-bottom: 0.2%;
+}
+
+.form_btn {
+    color: #8f666c;
+    padding: 0.4%;
+    margin-top: 1%;
+    border-radius: 5px;
+    font-size: 13px;
 }

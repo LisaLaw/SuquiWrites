@@ -22,7 +22,11 @@
             <span class="entry">
                 <div class="quote">
                     <a href="{% url 'entry_detail' pk=entry.pk %}" target="_blank">
-                        <h2>Some quote</h2>
+                        {% if entry.image %}
+                            <img class="quote_image">{{ entry.image }}</img>
+                        {% else %}
+                            <p>{{ entry.quote }}</p>
+                        {% endif %}
                     </a>
                 </div>
                 <div class="presentation">

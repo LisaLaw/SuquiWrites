@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Entry, Comment
+from .models import Entry
 from .forms import EntryForm, CommentForm
 from django.utils import timezone
 from django.shortcuts import redirect
-from django.views.generic import DetailView
+from django.template.context_processors import csrf
+from django.views.decorators.csrf import csrf_protect, csrf_exempt
 
 
 def home(request):
@@ -17,7 +18,7 @@ def entry_detail(request, pk):
     entry = get_object_or_404(Entry, pk=pk)
     comments = entry.comments.all()
     new_comment = None
-    if request.method == "Post":
+    if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             new_comment = comment_form.save(commit=False)
@@ -31,7 +32,7 @@ def entry_detail(request, pk):
         "suquiwrites/entry_detail.html",
         {
             "entry": entry,
-            "comments": comments,
+            "comments": comments.order_by("-date_posted"),
             "new_comment": new_comment,
             "comment_form": comment_form,
         },
