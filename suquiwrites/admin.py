@@ -4,11 +4,8 @@ from suquiwrites.models import Entry, Comment
 
 @admin.register(Entry)
 class EntryAdmin(admin.ModelAdmin):
-    list_display = [
-        "id",
-        "title",
-    ]
-    list_filter = ["title"]
+    list_display = ["id", "title", "quote", "image", "published_date"]
+    list_filter = ["title", "quote"]
 
 
 @admin.register(Comment)
