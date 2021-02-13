@@ -13,10 +13,6 @@ nav {
     margin-top: 3%;
 }
 
-#about {
-    margin-top: 10%;
-}
-
 .entry {
     width: 95%;
 }
@@ -75,7 +71,7 @@ h3 {
 }
 
 .entry_with_detail {
-    margin-top: 7%;
+    margin-top: 20%;
 }
 
 .comment_section {
