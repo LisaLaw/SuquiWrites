@@ -88,6 +88,14 @@ h2 {
     color:rgb(172, 82, 109);
 }
 
+.intro_a:hover {
+    color: #8f666c;
+}
+
+.intro_a:visited {
+    color: rgb(172, 82, 109);
+}
+
 .content_block {
     width: 100%;
 }
@@ -172,6 +180,10 @@ a:hover {
     color: black;
 }
 
+.presentation a:visited, .quote a:visited {
+    color: black;
+}
+
 h3 {
     text-align: center;
     color: rgb(172, 82, 109);
@@ -197,6 +209,10 @@ h3 {
     text-decoration: none;
     color: white;
     font-size: 17px;
+}
+
+.to_top a:visited {
+    color: white;
 }
 
 .to_top:hover {
@@ -270,6 +286,14 @@ button:hover {
 .btn-back a {
     color: #8f666c;
     text-decoration: none;
+}
+
+.btn-back a:hover {
+    color:rgb(194, 55, 97);
+}
+
+.btn-back a:visited {
+    color: #8f666c;
 }
 
 h1 {
@@ -366,7 +390,21 @@ h1 {
         width: 100%;
         height: 10%;
         border-radius: 5;
-        border:rgb(172, 82, 109) solid 1px;
+        border:rgb(194, 55, 97) solid 1px;
+    }
+
+    .contact_img_box a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color:rgb(194, 55, 97);
+    }
+
+    .contact_img_box:hover {
+        color: black;
+    }
+
+    .contact_img_box a:visited {
+        color: rgb(194, 55, 97);
     }
 
     .entry_with_detail {
