@@ -350,7 +350,7 @@ h1 {
 
 /*add responsive design for small screens*/
 
-@media (max_width: 600px){
+@media screen and (max_width: 600px){
     .big_display {
         display: none;
     }
@@ -415,10 +415,10 @@ h1 {
     }
 }
 
-/*responsive design for medium devices */
+/*responsive design for medium devices
 
-@media only screen and (max_width: 768px){
+@media screen and (max_width: 768px){
     .entry {
         width: 45%;
     }
-}
+}*/
