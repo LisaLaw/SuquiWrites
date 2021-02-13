@@ -14,11 +14,12 @@ nav {
 }
 
 #about {
-    margin-top: 30%;
+    margin-top: 25%;
 }
 
 .entry {
     width: 95%;
+    height: 30%;
 }
 
 .to_top {
