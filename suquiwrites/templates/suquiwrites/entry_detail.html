@@ -1,7 +1,7 @@
 {% extends 'suquiwrites/base.html' %}
 
 {% block intro %}
-    <button class="btn-back"><a href="{% url 'home' %}">Back to Suqui Writes</a></button>
+    <button class="btn-back big_display"><a href="{% url 'home' %}">Back to Suqui Writes</a></button>
 {% endblock %}
 
 {% block content %}
@@ -27,9 +27,7 @@
                 {{ comment_form.as_p }}
                 {% csrf_token %}
                 <a href="{% url 'entry_detail' pk=entry.pk %}">
-                <div class="form_btn">
-                    <input type="submit" value="Add my thoughts">
-                </div>
+                    <input type="submit" value="Add my thoughts" class="submit_btn">
                 </a>
             </form>
         </div>

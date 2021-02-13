@@ -1,0 +1,79 @@
+/*responsive design for small screens*/
+
+.entry {
+    width: 45%;
+}
+
+.to_top {
+    width:26%;
+    border-radius: 4%;
+}
+
+.to_top a {
+    font-size: 13px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.contact {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.contact_img_box {
+    width: 40%;
+    border-radius: 10px;
+    border:rgb(194, 55, 97) solid 1px;
+    font-size: 13px;
+    background-color: rgb(194, 55, 97);
+}
+
+.contact_img_box a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+.contact_img_box a p {
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_img_box:hover {
+    background-color: white;
+}
+
+.contact_img_box:hover a {
+    color:black;
+}
+
+.contact_img_box a:visited {
+    color: rgb(194, 55, 97);
+}
+
+.entry_with_detail {
+    margin-top: 7%;
+}
+
+.comment_section {
+    flex-direction: column;
+    width: 100%;
+}
+
+.left, .right {
+    width: 95%;
+}
+
+footer {
+    font-size: 11px;
+}
+
+h1 {
+    font-size: 23px;
+}

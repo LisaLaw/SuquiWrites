@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+        <link rel="stylesheet" href="{% static 'css/blog_small.css' %}" media="screen and (max-width:600px)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
@@ -30,10 +31,10 @@
         <button class="to_top">
             <a href="#home">
                 <p class="big_display">&#129053;</p>
-                <p class="small_display">to top</p>
+                <p class="small_display">back to the top</p>
             </a>
         </button>
-        <div class='detail_entry contact big_display' id="contact_box">
+        <div class='detail_entry contact' id="contact_box">
             <span class="contact_img_box" >
                 <a href="https://github.com/LisaLaw" target="_blank">
                     <img src="{% static 'images/icon-github.png' %}" alt="GitHub" class="big_display">
@@ -66,7 +67,7 @@
             </span>
         </div>
         <footer>
-            <p>&#169;2020 | Lisa Law</p>
+            <p>&#169;2020 | Suqui</p>
         </footer>
     </body>
 </html>

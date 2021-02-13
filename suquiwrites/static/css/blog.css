@@ -206,6 +206,7 @@ h3 {
     margin-top: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .to_top a {
@@ -340,85 +341,20 @@ h1 {
     margin-bottom: 0.2%;
 }
 
-.form_btn {
-    color: #8f666c;
-    padding: 0.4%;
-    margin-top: 1%;
-    border-radius: 5px;
-    font-size: 13px;
+form input.submit_btn {
+    border:solid 0.4px rgb(172, 82, 109);
+    color: rgb(172, 82, 109);
+    border-radius: 3px;
+    padding: 4px;
+    margin-bottom: 1%;
+    font-size: 14px;
 }
 
-/*add responsive design for small screens*/
-
-@media screen and (max_width: 600px){
-    .big_display {
-        display: none;
-    }
-
-    .small_display {
-        display: flex;
-    }
-    
-    nav {
-        height: 5%;
-    }
-    
-    #about {
-        margin-top: 12%;
-    }
-    
-    .entry {
-        width: 95%;
-    }
-
-    .to_top {
-        height: 10%;
-        width:30%;
-        border-radius: 5%;
-    }
-
-    h3 {
-        font-size: 30%;
-    }
-
-    .contact {
-        flex-direction: column;
-    }
-
-    .contact_img_box {
-        width: 100%;
-        height: 10%;
-        border-radius: 5;
-        border:rgb(194, 55, 97) solid 1px;
-    }
-
-    .contact_img_box a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color:rgb(194, 55, 97);
-    }
-
-    .contact_img_box:hover {
-        color: black;
-    }
-
-    .contact_img_box a:visited {
-        color: rgb(194, 55, 97);
-    }
-
-    .entry_with_detail {
-        margin-top: 10%;
-    }
-
-    .comment_section {
-        flex-direction: column;
-    }
+form input.submit_btn:hover {
+    cursor: pointer;
+    color:rgb(172, 82, 109);
 }
 
-/*responsive design for medium devices
-
-@media screen and (max_width: 768px){
-    .entry {
-        width: 45%;
-    }
-}*/
+form a {
+    cursor: context-menu;
+}
