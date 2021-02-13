@@ -1,5 +1,22 @@
 /*responsive design for small screens*/
 
+.big_display {
+    display: none;
+}
+
+.small_display {
+    display: flex;
+}
+
+nav {
+    height: 10%;
+    margin-top: 3%;
+}
+
+#about {
+    margin-top: 10%;
+}
+
 .entry {
     width: 45%;
 }
