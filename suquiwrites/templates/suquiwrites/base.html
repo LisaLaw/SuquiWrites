@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -26,8 +27,13 @@
             {% block content %}
             {% endblock %}
         </div>
-        <button class="to_top"><a href="#home">&#129053;</a></button>
-        <div class='detail_entry contact' id="contact_box">
+        <button class="to_top">
+            <a href="#home">
+                <p class="big_display">&#129053;</p>
+                <p class="small_display">to top</p>
+            </a>
+        </button>
+        <div class='detail_entry contact big_display' id="contact_box">
             <span class="contact_img_box" >
                 <a href="https://github.com/LisaLaw" target="_blank"><img src="{% static 'images/icon-github.png' %}" alt="GitHub"></a>
             </span>
@@ -44,5 +50,35 @@
                 <a href="https://twitter.com/mrs_l_law" target="_blank"><img src="{% static 'images/icon-twitter.png' %}" alt="Twitter"></a>
             </span>
         </div>
+        <div class='detail_entry contact small_display' id="contact_box">
+            <span class="contact_img_box" >
+                <a href="https://github.com/LisaLaw" target="_blank">
+                    <p>GitHub</p>
+                </a>
+            </span>
+            <span class="contact_img_box" class="make_big">
+                <a href="https://www.linkedin.com/in/lisa-law/" target="_blank">
+                    <p>LinkedIn</p>
+                </a>
+            </span>
+            <span class="contact_img_box">
+                <a href="mailto:lisacatlaw@gmail.com" target="_blank">
+                    <p>Email</p>
+                </a>
+            </span>
+            <span class="contact_img_box">
+                <a href="tel:0044-7366-40-95-18">
+                    <p>Call</p>
+                </a>
+            </span>
+            <span class="contact_img_box">
+                <a href="https://twitter.com/mrs_l_law" target="_blank">
+                    <p>Twitter</p>
+                </a>
+            </span>
+        </div>
+        <footer>
+            <p>&#169;2020 | Lisa Law</p>
+        </footer>
     </body>
 </html>

@@ -59,7 +59,7 @@ nav img {
     font-size: 40px;
     width: 100%;
     margin-top: 10%;
-    padding-top: 10px;
+    padding-top: 10%;
 }
 
 .entry_with_detail, .comment_box {
@@ -129,11 +129,9 @@ a:hover {
 }
 
 .quote {
-    background: rgb(248,243,242);
     background: linear-gradient(328deg, rgba(248,243,242,1) 0%, rgba(244,212,212,1) 71%, rgba(214,152,161,1) 100%);
     align-items: center;
     width: 100%;
-    border-radius: 5px;
     box-shadow: 1px 1px 3px #8f666c;
     border-bottom: 2px solid #8f666c;
     border-radius: 5px;
@@ -161,7 +159,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
+    width: 25%; /*check if this has changed*/
     margin-top: -60px;
     box-shadow: 1px 1px 3px #8f666c;
     border-bottom: 1px solid #8d7d80;
@@ -188,8 +186,8 @@ h3 {
     background-color:  rgb(194, 55, 97);
     border-radius: 50%;
     border: 1px solid transparent;
-    height: 30px;
-    width: 30px;
+    height: 5%;
+    width: 5%;
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -204,6 +202,10 @@ h3 {
 .to_top:hover {
     cursor: pointer;
     transform: scale(1.1)
+}
+
+.small_display {
+    display: none;
 }
 
 .contact {
@@ -237,6 +239,12 @@ h3 {
 
 .contact .make_big {
     width: 60%;
+}
+
+footer {
+    border-top: 1px solid rgb(241, 57, 115);
+    width: 50%;
+    text-align: center;
 }
 
 /*start css for entry_detail page*/
@@ -310,4 +318,74 @@ h1 {
     margin-top: 1%;
     border-radius: 5px;
     font-size: 13px;
+}
+
+/*add responsive design for small screens*/
+
+@media only screen and (max_width: 600px){
+    .big_display {
+        display: none;
+    }
+    
+    .small_display {
+        display: inline-block;
+    }
+    
+    nav {
+        height: 5%;
+    }
+    
+    .intro_block {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+    .entry {
+        width: 100%;
+    }
+    
+    .presentation {
+        width: 95%;
+    }
+
+    .to_top {
+        height: 10%;
+        width:30%;
+        border-radius: 5%;
+    }
+
+    h3 {
+        font-size: 30%;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact_img_box {
+        width: 100%;
+        height: 10%;
+        border-radius: 5;
+        border:rgb(172, 82, 109) solid 1px;
+    }
+
+    .entry_with_detail {
+        margin-top: 10%;
+    }
+
+    .comment_section {
+        flex-direction: column;
+    }
+}
+
+/*responsive design for medium devices */
+
+@media only screen and (max_width: 768px){
+    .entry {
+        width: 45%;
+    }
+
+    .presentation {
+        width: 40%;
+    }
 }
