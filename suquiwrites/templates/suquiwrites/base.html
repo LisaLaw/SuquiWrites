@@ -18,7 +18,9 @@
             {% endif %}
         </div>
         <nav>    
-            <a href="{% url 'home' %}"><img src="{% static 'images/banner.png' %}" alt="Suqui Writes"></a>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/banner.png' %}" alt="Suqui Writes">
+            </a>
         </nav>
         <div class="intro_block">
             {% block intro %}
@@ -28,12 +30,11 @@
             {% block content %}
             {% endblock %}
         </div>
-        <button class="to_top">
-            <a href="#home">
-                <p class="big_display">&#129053;</p>
-                <p class="small_display">back to the top</p>
-            </a>
-        </button>
+        <a href="#home" class="to_top">
+            <p class="big_display">&#129053;</p>
+            <p class="small_display">back to the top</p>
+        </a>
+        </div>
         <div class='detail_entry contact' id="contact_box">
             <span class="contact_img_box" >
                 <a href="https://github.com/LisaLaw" target="_blank">

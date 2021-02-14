@@ -31,7 +31,7 @@ nav {
     position: fixed;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     width: inherit;
     background-color: white;
     z-index: 5;
@@ -44,21 +44,21 @@ nav {
 
 nav a {
     height: 100%;
-    overflow: hidden;
-    padding: 3px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 nav img {
-    height: 100%;
-    align-self: center;
-    padding-right: 30px;
+    height: 99%;
     z-index: 5;
 }
 
 .intro_block {
     font-size: 40px;
     width: 100%;
-    padding-top: 10%;
+    margin-top: 15%;
 }
 
 .entry_with_detail, .comment_box {
@@ -70,10 +70,6 @@ nav img {
     padding-left: 2%;
 }
 
-#about {
-    margin-top: 2%;
-}
-
 h2 {
     color: rgb(172, 82, 109);
     font-size: 20px;
@@ -83,7 +79,7 @@ h2 {
 .intro_p {
     font-size: 17px;
     line-height: 1.5;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Sans MS", "Comic Sans";
 }
 
 .intro_a {
@@ -107,17 +103,16 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px 10px;
     width: 100%;
     flex-wrap: wrap;
 }
 
 .entry {
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 30%;
+    transition: 0.3s;
 }
 
 .entry:hover {
@@ -135,22 +130,36 @@ h2 {
     100% { transform: rotate(0deg); } 
 }
 
+.entry a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+a {
+    transition: 0.3s;
+    text-decoration: none;
+    color: black;
+}
+
 a:hover {
     cursor: pointer;
+}
+
+a:visited {
+    color: black;
 }
 
 .quote {
     background: linear-gradient(328deg, rgba(248,243,242,1) 0%, rgba(244,212,212,1) 71%, rgba(214,152,161,1) 100%);
     align-items: center;
-    width: 100%;
     box-shadow: 1px 1px 3px #8f666c;
     border-bottom: 2px solid #8f666c;
     border-radius: 5px;
     height: 300px; 
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-top: 20px;
 }
 
 .quote_image {
@@ -162,7 +171,6 @@ a:hover {
     text-align: center;
     font-style: italic;
     color: black;
-    
 }
 
 .presentation {
@@ -170,21 +178,13 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%; /*check if this has changed*/
+    align-self: center;
+    width: 90%;
     margin-top: -60px;
     box-shadow: 1px 1px 3px #8f666c;
     border-bottom: 1px solid #8d7d80;
     border-right-style: 1px solid #8d7d80;
     border-radius: 5px;
-}
-
-.presentation a, .quote a {
-    text-decoration: none;
-    color: black;
-}
-
-.presentation a:visited, .quote a:visited {
-    color: black;
 }
 
 h3 {
@@ -207,22 +207,25 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
-
-.to_top a {
+    transition: 0.3s;
     text-decoration: none;
     color: white;
     font-size: 17px;
 }
 
-.to_top a:visited {
+.to_top:visited {
     color: white;
 }
 
 .to_top:hover {
     cursor: pointer;
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
+
+.to_top p {
+    align-self: center;
+}
+
 
 .small_display {
     display: none;
@@ -250,7 +253,6 @@ h3 {
 }
 
 .contact a:hover {
-    cursor: pointer;
     animation: 0.7s wobble ease-in-out;
 }
 
@@ -274,6 +276,7 @@ footer {
 button {
     border: 1pt #8f666c solid;
     box-shadow: -1px 1px 1px #8f666c;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -348,6 +351,7 @@ form input.submit_btn {
     padding: 4px;
     margin-bottom: 1%;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 form input.submit_btn:hover {

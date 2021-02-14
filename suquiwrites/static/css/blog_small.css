@@ -8,37 +8,48 @@
     display: flex;
 }
 
-nav {
-    height: 10%;
-    margin-top: 3%;
+body {
+    width: 100%;
 }
 
-#about {
-    margin-top: 25%;
+nav {
+    height: 7%;
+    margin-top: 3%;
+    width: 100%;
+    border-radius: none;
+}
+
+.intro_block {
+    width: 100%;
+    border-radius: none;
+    margin-top: 10%;
 }
 
 .entry {
-    width: 95%;
-    height: 30%;
+    width: 100%;
 }
+
 
 .to_top {
     width:26%;
     border-radius: 4%;
 }
 
-.to_top a {
+.to_top {
     font-size: 13px;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 16px;
+}
+
+.presentation_p {
+    font-size: 12px;
 }
 
 .contact {
     flex-direction: column;
     width: 100%;
-    padding-top: 1%;
     padding-bottom: 1%;
 }
 
@@ -82,10 +93,16 @@ h3 {
 .comment_section {
     flex-direction: column;
     width: 100%;
+    align-items: center;
 }
 
 .left, .right {
-    width: 95%;
+    width: 100%;
+}
+
+.left {
+    padding-left: 1%;
+    align-items: center;
 }
 
 footer {
