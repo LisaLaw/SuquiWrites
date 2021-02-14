@@ -83,16 +83,22 @@ h2 {
 }
 
 .intro_a {
-    text-decoration: none;
+    text-decoration: underline;
+    
     color:rgb(172, 82, 109);
+    transition: 0.3s;
 }
 
 .intro_a:hover {
-    color: #8f666c;
+    font-style: italic;
 }
 
 .intro_a:visited {
     color: rgb(172, 82, 109);
+}
+
+ul {
+    margin: 0px;
 }
 
 .content_block {
