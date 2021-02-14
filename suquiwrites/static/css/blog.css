@@ -97,6 +97,7 @@ h2 {
 
 .content_block {
     width: 100%;
+    margin-top: 2%;
 }
 
 .row {
@@ -273,22 +274,15 @@ footer {
 
 /*start css for entry_detail page*/
 
-button {
+.btn_back a {
     border: 1pt #8f666c solid;
     box-shadow: -1px 1px 1px #8f666c;
     transition: 0.3s;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.btn-back {
     color: slategrey;
     border-radius: 10px;
     padding: 8px 10px;
     font-size: 15px;
-    margin: -6% 0 1% 0;
+    margin: -6% 0 100% 0;
 }
 
 .btn-back a {

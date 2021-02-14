@@ -1,5 +1,11 @@
 {% extends 'suquiwrites/base.html' %}
 
+{% block intro %}
+    <div class="btn_back big_display">
+        <a href="{% url 'home' %}">Back to Suqui Writes</a>
+    </div>
+{% endblock %}
+
 {% block content %}
     <div class="entry_with_detail">
         <h1>{{ entry.title }}</h1>

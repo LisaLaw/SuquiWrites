@@ -25,6 +25,10 @@ nav {
     margin-top: 10%;
 }
 
+.content_block {
+    margin-top: 0;
+}
+
 .entry {
     width: 100%;
 }
@@ -41,6 +45,10 @@ nav {
 
 h3 {
     font-size: 16px;
+}
+
+.presentation {
+    border-radius: none;
 }
 
 .presentation_p {
@@ -88,6 +96,7 @@ h3 {
 
 .entry_with_detail {
     margin-top: 20%;
+    border-radius: none;
 }
 
 .comment_section {
@@ -103,6 +112,11 @@ h3 {
 .left {
     padding-left: 1%;
     align-items: center;
+}
+
+.comment_form {
+    padding-right: 0.5px;
+    padding-left: 0.5px;
 }
 
 footer {
