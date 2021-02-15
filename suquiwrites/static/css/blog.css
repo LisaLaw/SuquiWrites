@@ -170,8 +170,10 @@ a:visited {
 }
 
 .quote_image {
-    height:100%;
-    width: auto;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: inherit;
 }
 
 .quote p {
