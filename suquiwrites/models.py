@@ -33,4 +33,4 @@ class Comment(models.Model):
         ordering = ["-date_posted"]
 
     def __str__(self):
-        return self.author + "," + self.connected_entry.title[:40]
+        return self.name + "," + self.connected_entry.title[:40]
