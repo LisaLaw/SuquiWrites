@@ -31,7 +31,7 @@
 
 {% block content %}   
     <div class=row>
-        {% for entry in entries.order_by('-published_date') %}
+        {% for entry in entries.objects.order_by('-published_date') %}
             <span class="entry">
                 <a href="{% url 'entry_detail' pk=entry.pk %}">
                     
