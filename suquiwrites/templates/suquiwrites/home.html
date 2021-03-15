@@ -18,7 +18,7 @@
             <li>I am hungry all the time, and vegan most of the time. Favourite food: Pancakes made my by dad or former flat made David.</li>
         </ul>
         <p class="intro_p">
-            <span style="color:rgb(172, 82, 109)">What to expect:</span> random articles about my life in Spain.<br>
+            <span style="color:rgb(172, 82, 109)">What to expect:</span> random articles about how I'm trying to live a better life.<br>
             <br>
             I'm trying to connect the dots and live a fulfilled, happy life.<br>
             Come join me!
@@ -31,7 +31,7 @@
 
 {% block content %}   
     <div class=row>
-        {% for entry in entries %}
+        {% for entry in entries.order_by('-published_date') %}
             <span class="entry">
                 <a href="{% url 'entry_detail' pk=entry.pk %}">
                     
