@@ -1,58 +1,73 @@
-{% extends 'suquiwrites/base.html' %}
-
-{% block intro %}
-    <div class="entry_with_detail" id="about">
-        <h2>About me</h2>
-        <p class="intro_p">
-            I'm so glad you found my blog. Welcome! I hope you find a little bit of joy on this page.<br>
-            <span style="color:rgb(172, 82, 109)">My Name:</span> Suqui.<br>
-            <span style="color:rgb(172, 82, 109)">Me:</span> programmer, linguist, kareteka and foodie.<br>
-            <span style="color:rgb(172,82,109)">Current mission:</span> Spreading positivity, inspire myself and others, conquering the universe.<br>
-            <span style="color:rgb(172,82,109)">Fun Facts:</span>
+{% extends 'suquiwrites/base.html' %} {% block intro %}
+<div class="entry_with_detail" id="about">
+  <h2>About me</h2>
+  <p class="intro_p">
+    I'm so glad you found my blog. Welcome! I hope you find a little bit of joy
+    on this page.<br />
+    <span style="color: rgb(172, 82, 109)">My Name:</span> Suqui.<br />
+    <span style="color: rgb(172, 82, 109)">Me:</span> programmer, linguist,
+    kareteka and foodie.<br />
+    <span style="color: rgb(172, 82, 109)">Current mission:</span> Spread
+    positivity, inspire myself and others, conquer the universe.<br />
+    <span style="color: rgb(172, 82, 109)">Fun Facts:</span>
+  </p>
+  <ul class="intro_p">
+    <li>
+      If I could be anyone, I'd be Celaena. (If you haven't read
+      <a href="https://sarahjmaas.com/throneofglass/" class="intro_a"
+        >Throne of Glass</a
+      >, now is the time.)
+    </li>
+    <li>
+      I'm currently 28 years old and this year I might finally grow out of
+      Disney. Maybe.
+    </li>
+    <li>I'm German, live in Spain and married a British guy.</li>
+    <li>
+      No weather is too hot for me, and one of my favourite places on Earth is
+      Death Valley.
+    </li>
+    <li>
+      I am hungry all the time, and vegan most of the time. Favourite food:
+      Pancakes made my by dad or former flat made David.
+    </li>
+  </ul>
+  <p class="intro_p">
+    <span style="color: rgb(172, 82, 109)">What to expect:</span> random
+    articles about how I'm trying to live a better life.<br />
+    <br />
+    I'm trying to connect the dots and live a fulfilled, happy life.<br />
+    Come join me! I love a good discussion, so please,
+    <a href="#contact_box" class="intro_a">get in touch</a>!
+    <br />
+    <br />I so look forward to hearing from you and hearing your thoughts.
+  </p>
+</div>
+{% endblock %} {% block content %}
+<div class="row">
+  {% for entry in entries %}
+  <span class="entry">
+    <a href="{% url 'entry_detail' pk=entry.pk %}">
+      {% if entry.image %}
+      <div class="quote">
+        <img class="quote_image" src="{{ entry.image.url }}" />
+      </div>
+      {% else %}
+      <div class="quote">
+        <p>{{ entry.quote }}</p>
+      </div>
+      {% endif %}
+      <div class="presentation">
+        <h3>{{ entry.title }}</h3>
+        <p class="presentation_p big_display">
+          {{ entry.published_date|date:"d M Y"}}
         </p>
-        <ul class="intro_p">
-            <li>If I could be anyone, I'd be Celaena. (If you haven't read <a href="https://sarahjmaas.com/throneofglass/" class="intro_a">Throne of Glass</a>, now is the time.)</li>
-            <li>I'm currently 28 years old and this year I might finally grow out of Disney. Maybe.</li>
-            <li>I'm German, live in Spain and married a British guy.</li>
-            <li>No weather is too hot for me, and one of my favourite places on Earth is Death Valley.</li>
-            <li>I am hungry all the time, and vegan most of the time. Favourite food: Pancakes made my by dad or former flat made David.</li>
-        </ul>
-        <p class="intro_p">
-            <span style="color:rgb(172, 82, 109)">What to expect:</span> random articles about how I'm trying to live a better life.<br>
-            <br>
-            I'm trying to connect the dots and live a fulfilled, happy life.<br>
-            Come join me!
-            I love a good discussion, so please, <a href="#contact_box" class="intro_a">get in touch</a>!
-            <br>
-            <br>I so look forward to hearing from you and hearing your thoughts.
+        <p class="presentation_p small_display">
+          {{ entry.published_date|date:"d M y"}}
         </p>
-    </div>
-{% endblock %}
-
-{% block content %}   
-    <div class=row>
-        {% for entry in entries %}
-            <span class="entry">
-                <a href="{% url 'entry_detail' pk=entry.pk %}">
-                    
-                    {% if entry.image %}
-                        <div class="quote">
-                            <img class="quote_image" src="{{ entry.image.url }}"/>
-                        </div>
-                    {% else %}
-                        <div class="quote">
-                            <p>{{ entry.quote }}</p>
-                        </div>
-                    {% endif %}
-                    <div class="presentation">
-                        
-                            <h3>{{ entry.title }}</h3>
-                            <p class="presentation_p big_display">{{ entry.published_date|date:"d M Y"}}</p>
-                            <p class="presentation_p small_display">{{ entry.published_date|date:"d M y"}}</p>
-                        
-                    </div>
-                </a>
-            </span>
-        {% endfor %}
-    </div>
+      </div>
+    </a>
+  </span>
+  {% endfor %}
+</div>
 {% endblock %}
