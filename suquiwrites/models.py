@@ -13,7 +13,7 @@ class Entry(models.Model):
     class Meta:
         verbose_name = "Entry"
         verbose_name_plural = "Entries"
-        ordering = ["-published_date",]
+        ordering = ["-created_at",]
 
     def __str__(self):
         return self.title
